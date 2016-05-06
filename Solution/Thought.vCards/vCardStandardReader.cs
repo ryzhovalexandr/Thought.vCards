@@ -1092,9 +1092,8 @@ namespace Thought.vCards
 
                     // The property name is not recognized and
                     // will be ignored.
-
+                    ReadInto_Others(card, property);
                     break;
-
             }
 
         }
@@ -1944,6 +1943,18 @@ namespace Thought.vCards
                 }
             }
 
+        }
+
+        #endregion
+
+        #region [ ReadInto_Others ]
+
+        /// <summary>
+        ///     Reads unrecognized property.
+        /// </summary>
+        private static void ReadInto_Others(vCard card, vCardProperty property)
+        {
+            card.Others.Add(property);
         }
 
         #endregion

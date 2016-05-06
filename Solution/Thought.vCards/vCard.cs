@@ -72,6 +72,7 @@ namespace Thought.vCards
         private vCardPhotoCollection photos;
         private vCardSourceCollection sources;
         private vCardWebsiteCollection websites;
+        private vCardPropertyCollection others;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="vCard"/> class.
@@ -111,6 +112,7 @@ namespace Thought.vCards
             this.photos = new vCardPhotoCollection();
             this.sources = new vCardSourceCollection();
             this.websites = new vCardWebsiteCollection();
+            this.others = new vCardPropertyCollection();
         }
 
 
@@ -738,6 +740,17 @@ namespace Thought.vCards
             get
             {
                 return this.websites;
+            }
+        }
+
+        /// <summary>
+        ///     Properties that haven't been recognized.
+        /// </summary>
+        public vCardPropertyCollection Others
+        {
+            get
+            {
+                return this.others;
             }
         }
 
